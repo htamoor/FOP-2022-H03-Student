@@ -15,6 +15,7 @@ public class Main {
     World.setDelay(200);
     World.setVisible(true);
     robotTests();
+
   }
 
   /**
@@ -33,6 +34,26 @@ public class Main {
    * robotTests(), where Robots can be tested
    */
   public static void robotTests() {
-    //TODO Testing
+    RobotWithInitialState robot = new RobotWithInitialState(0, 0, Direction.UP, 0);
+    robot.move();
+    robot.move();
+    robot.turnLeft();
+    robot.turnLeft();
+    robot.turnLeft();
+    robot.move();
+    System.out.println("x Wert von Robot ist: " + robot.getX());
+    System.out.println("y Wert von Robot ist: " + robot.getY());
+    System.out.println("xdirection Wert von Robot ist: " + robot.getDirection());
+    System.out.println("x Wert von RootWithInitialState ist: " + robot.getInitialX());
+    System.out.println("y Wert von RootWithInitialState ist: " + robot.getInitialY());
+    System.out.println("direction Wert von RootWithInitialState ist: " + robot.getInitialDirection());
+    robot.setX(2);
+    robot.setY(2);
+    System.out.println("x Wert von Robot ist: " + robot.getX());
+    System.out.println("y Wert von Robot ist: " + robot.getY());
+    System.out.println("xdirection Wert von Robot ist: " + robot.getDirection());
+    System.out.println("x Wert von RootWithInitialState ist: " + robot.getInitialX());
+    System.out.println("y Wert von RootWithInitialState ist: " + robot.getInitialY());
+    System.out.println("direction Wert von RootWithInitialState ist: " + robot.getInitialDirection());
   }
 }
